@@ -13,9 +13,9 @@ def date_sorter():
                   'Jul':'07','Aug':'08','Sep':'09','Oct':'10','Nov':'11','Dec':'12'}
     count = 0
     for s in df:
-        count = count + 1
+        count = count + 1             # Using count just in case if some error occurs, so to check that error (optional)
         if len(re.findall(type1,s)) != 0:
-            date = list(re.findall(type1,s)[0])  
+            date = list(re.findall(type1,s)[0])       # Using list because without list it is a tuple, and we cannot modify tuple
             if len(date[0]) == 1:
                 date[0] = "0"+date[0]
             if len(date[1]) == 1:
